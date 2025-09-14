@@ -48,3 +48,8 @@ def task_4(df):
         return []
     return df['profession'].value_counts().head(5)
 
+print(task_1(df_bellevue))
+print(task_2(df_bellevue))
+print(task_3(df_bellevue))
+print(task_4(df_bellevue))
+
