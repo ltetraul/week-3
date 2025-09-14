@@ -23,3 +23,10 @@ print(to_binary(15))
 #exercise 3
 url = 'https://github.com/melaniewalsh/Intro-Cultural-Analytics/raw/master/book/data/bellevue_almshouse_modified.csv'
 df_bellevue = pd.read_csv(url)
+
+def task_1(df):
+    #fix gender column
+    if 'gender' in df.columns:
+        df['gender'] = df['gender'].replace(r'^\s*$', pd.NA, regex=True)
+    return df.isnull().sum().sort_values(ascending=False)
+
