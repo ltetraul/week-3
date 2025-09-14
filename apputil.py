@@ -35,3 +35,10 @@ def task_2(df):
     if 'year' not in df.columns:
         return pd.DataFrame(columns=['year', 'total_admissions'])
     return df.groupby('year').size().reset_index(name='total_admissions')
+
+def task_3(df):
+    #series of average age by gender
+    if 'gender' not in df.columns or 'age' not in df.columns:
+        return pd.Series(dtype=float)
+    return df.dropna(subset=['gender', 'age']).groupby('gender')['age'].mean()
+
