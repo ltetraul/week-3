@@ -19,3 +19,7 @@ def to_binary(n):
         return to_binary(n // 2) + str(n % 2)
 print(to_binary(2))
 print(to_binary(15))
+
+#exercise 3
+url = 'https://github.com/melaniewalsh/Intro-Cultural-Analytics/raw/master/book/data/bellevue_almshouse_modified.csv'
+df_bellevue = pd.read_csv(url)
