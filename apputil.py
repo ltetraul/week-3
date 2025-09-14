@@ -42,3 +42,9 @@ def task_3(df):
         return pd.Series(dtype=float)
     return df.dropna(subset=['gender', 'age']).groupby('gender')['age'].mean()
 
+def task_4(df):
+    #list of top 5 professions
+    if 'profession' not in df.columns:
+        return []
+    return df['profession'].value_counts().head(5)
+
