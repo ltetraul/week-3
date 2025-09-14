@@ -10,3 +10,12 @@ def fib(n):
     else:
         return fib(n - 1) + fib(n - 2)
 print(fib(10))
+
+#exercise 2
+def to_binary(n):
+    if n < 2:
+        return str(n)
+    else:
+        return to_binary(n // 2) + str(n % 2)
+print(to_binary(2))
+print(to_binary(15))
