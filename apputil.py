@@ -30,3 +30,8 @@ def task_1(df):
         df['gender'] = df['gender'].replace(r'^\s*$', pd.NA, regex=True)
     return df.isnull().sum().sort_values(ascending=False)
 
+def task_2(df):
+    #admissions per year dataframe
+    if 'year' not in df.columns:
+        return pd.DataFrame(columns=['year', 'total_admissions'])
+    return df.groupby('year').size().reset_index(name='total_admissions')
