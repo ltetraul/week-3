@@ -17,12 +17,16 @@ print(fib(10)) #test example
 
 #exercise 2
 def to_binary(n):
+    """
+    Convert an integer to its binary representation as a string.
+    """
     if n < 2:
         return str(n)
     else:
         return to_binary(n // 2) + str(n % 2)
-print(to_binary(2))
-print(to_binary(15))
+
+print(to_binary(2))   #output should be 10
+print(to_binary(15))  #output should be 1111
 
 #exercise 3
 url = 'https://github.com/melaniewalsh/Intro-Cultural-Analytics/raw/master/book/data/bellevue_almshouse_modified.csv'
